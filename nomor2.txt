@@ -1,0 +1,54 @@
+Nim  = 21090037
+Nama = Fadila Rizka Nur Aminah
+Kelas= 2B
+
+Diket   : data nilai = {90,72,65,100,63,72}
+	Ditanya : berapa urutan yg terjadi di P = 4?
+ 	Jawab   :
+
+misal data nilai = a.
+a = { 90, 72, 65, 100, 63, 72}
+	0    1   2    3   4   5
+p = 4
+quick = (a,start,p-1) --> quick (a,0,3);
+int p = partition (a,0,3)
+start = 0
+end = 3
+
+partition
+pivot = a [end] --> pivot = a[3]; -> pivot = 100;
+i = (start - 1) i=-1
+for ( j=0; j<=3)
+
+j=0
+    if(a[j] < 100) --> if(90 < 100 ? )
+    i = i + 1 --> i = -1 + 1 = 0;
+    int t  = a[i] --> t = a[0]; -> t=90;
+    a[i] = a[j] --> a[0] = a[j]; ->  a[0] =90;
+    a[j] = t --> 90;
+
+j=1
+    if(a[j] < 100) --> if(72 < 100 ? )
+    i = i + 1 --> i = 0 + 1 = 1;
+    int t = a[i] --> t = a[1]; -> t=72;
+    a[i] = a[j] --> a[1] = a[j]; -> a[1] =72;
+    a[j] = t -->  72;
+
+j=2
+    if(a[j] < 100) --> if(65 < 100 ? )
+    i = i + 1 --> i=2;
+    int t = a[i] --> t=a[2]; -> t=65;
+    a[i] = a[j] --> a[2] = a[2]; -> a[2] = 65;
+    a[j] = t --> 65;
+
+j=3
+    if(a[j] < 100) --> if(100 < 100 ? )     salah!!
+
+   int t = a[i+1] --> t=a[3]; -> t=100;
+   a[i] = a[end] --> a[3] = a[3]; --> a[3] = 100;
+   a[end] = t --> 100;
+   return --> return 3
+
+   a = 90,72,65,100,63,72
+
+jadi urutan nilai di p = 4 itu sama seperti di soal
