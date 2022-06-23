@@ -1,3 +1,7 @@
+Nim   = 21090037
+Nama  = Fadila Rizka Nur Aminah
+Kelas = 2B
+
 1. pertama-tama Buat class method node insert dan inorder seperti codingan minggu kemarin.
 nah
     private static Node insert(Node node, int key)
