@@ -1,0 +1,52 @@
+1. pertama-tama Buat class method node insert dan inorder seperti codingan minggu kemarin.
+nah
+    private static Node insert(Node node, int key)
+    {
+        if (node == null) {  //yes => temp = new node (0039) temp.key =0039; temp.left = null , temo.right = null
+            Node temp = new Node(key);
+            return temp;
+        }
+        if (key < node.key){
+            node.left = insert(node.left,key);
+        }
+        else if (key > node.key){
+            node.right = insert(node.right,key);
+        }
+        return node;
+    }
+    private static void inorder(Node root){
+        if (root != null){
+            inorder(root.left);
+            System.out.println(" " + root.key);
+            inorder(root.right);
+        }
+    }
+   nah dari class method tersebut maka dapat mengatur level dari data yang masuk,
+   class ini untuk membuat root serta mengatur levelnya
+2. kemudian panggil PSVM
+3. Masukan Tag ID tersebut dengan parameter (root,Tag ID)
+4. nah Binary Tree akan membentuk root awal dengan nama TG0039-21
+5. kemudian akan diurutkan melalui ID nomer Urut dari tag ID yang ada.
+==> -TG0039-21
+    -BB0020-22
+    -SR0012-20
+    -MM0014-32
+    -JG0010-21
+6. nah root akan diurutkan nilai ID nomer < Root awal maka masuk kaki kiri,
+jika ID nomer > Root awal maka berada di kaki kanan.
+BB0020-21 < TG0039-21 berarti tag Id tersebut ada dikiri
+
+7. Hasilnya seperti berikut:
+
+                                       TG0039-21
+                                        /     \
+                                   BB0020-22  -
+                                     /    \
+                                SR0012-22  -
+                                  /    \
+                                 -  MM0014-32
+                                      /    \
+                                 JG0010-21  -
+
+8.Jadi 0012 ( SR0012-22) Letaknya ada di kaki kiri Root Level Kedua
+
